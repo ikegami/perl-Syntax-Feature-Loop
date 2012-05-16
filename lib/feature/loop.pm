@@ -3,7 +3,7 @@ package feature::loop;
 use strict;
 use warnings;
 
-use version; our $VERSION = qv('v1.2.0');
+use version; our $VERSION = qv('v1.3.0');
 
 use Devel::CallParser qw( );
 use XSLoader          qw( );
@@ -32,7 +32,7 @@ feature::loop - Provides the C<loop BLOCK> syntax for unconditional loops.
 
 =head1 VERSION
 
-Version 1.2.0
+Version 1.3.0
 
 
 =head1 SYNOPSIS
