@@ -10,9 +10,6 @@ use XSLoader          qw( );
 
 XSLoader::load('feature::loop', $VERSION);
 
-sub loop;
-hook(\&loop);
-
 sub import {
     require Lexical::Sub;
     Lexical::Sub->import( loop => \&loop );
@@ -149,21 +146,6 @@ law.
 
 Works under CC0 do not require attribution. When citing the work, you should
 not imply endorsement by the author.
-
-
-=begin comment
-
-=head1 Private Functions
-
-=over 4
-
-=item C<< hook >>
-
-=item C<< loop >>
-
-=back
-
-=end comment
 
 
 =cut

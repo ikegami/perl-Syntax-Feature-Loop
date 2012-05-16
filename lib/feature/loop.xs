@@ -54,8 +54,9 @@ STATIC OP* ck_loop(pTHX_ OP* o, GV* namegv, SV* ckobj) {
 
 MODULE = feature::loop   PACKAGE = feature::loop
 
-void
-hook(CV* cv);
-   PPCODE:
-      cv_set_call_parser(cv, parse_loop, &PL_sv_undef);
-      cv_set_call_checker(cv, ck_loop, &PL_sv_undef);
+BOOT:
+{
+   CV* const loopcv = get_cvn_flags("feature::loop::loop", 19, GV_ADD);
+   cv_set_call_parser(loopcv, parse_loop, &PL_sv_undef);
+   cv_set_call_checker(loopcv, ck_loop, &PL_sv_undef);
+}
