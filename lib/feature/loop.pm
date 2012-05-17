@@ -53,18 +53,20 @@ Provides the C<loop BLOCK> syntax for unconditional loops.
 Like other flow control statements, there is no need to
 terminate the statement with a semi-colon (C<;>).
 
-This module serves as a demonstration of the L<perlapi/cv_set_call_parser>
-and L<perlapi/cv_set_call_checker> Perl API calls.
+This module serves as a demonstration of the
+L<C<cv_set_call_parser>|perlapi/cv_set_call_parser> and
+L<C<cv_set_call_checker>|perlapi/cv_set_call_checker>
+Perl API calls.
 
 Other ways of achieving the same result are:
 
 =over
 
-=item C<for (;;) BLOCK>
+=item * C<for (;;) BLOCK>
 
-=item C<while (1) BLOCK>
+=item * C<while (1) BLOCK>
 
-=item C<while () BLOCK>
+=item * C<while () BLOCK>
 
 =back
 
