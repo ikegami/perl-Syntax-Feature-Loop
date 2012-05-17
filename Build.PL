@@ -32,18 +32,12 @@ my $build = Module::Build->new(
       'XSLoader'           => 0,
    },
    PL_files => { 'make_call_parser.PL' => 'callparser1.h' },
-   add_to_cleanup => [ 'feature-loop-*', 'vc100.pdb' ],
-   resources => {
-      homepage => 'http://search.cpan.org/dist/feature-loop/',
-      #license => [ ],  # Populated by Software::License::*
-      bugtracker => {
-         web     => 'http://rt.cpan.org/Public/Dist/Display.html?Name=feature-loop',
-         #mailto => 'bug-feature-loop@rt.cpan.org',
-      },
-      repository => {
-         type => 'git',
-         url  => 'git://github.com/ikegami/perl-feature-loop.git',
-         web  => 'http://github.com/ikegami/perl-feature-loop',
+   add_to_cleanup => [ 'feature-loop-*' ],
+   meta_merge  => {
+      resources => {
+         homepage   => 'http://search.cpan.org/dist/feature-loop/',
+         bugtracker => 'http://rt.cpan.org/Public/Dist/Display.html?Name=feature-loop',
+         repository => "http://github.com/ikegami/perl-feature-loop",  # type => "git"
       }
    },
 );
