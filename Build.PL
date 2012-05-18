@@ -6,7 +6,7 @@ use warnings;
 use Module::Build qw( );
 
 my $build = Module::Build->new(
-   module_name => 'feature::loop',
+   module_name => 'Syntax::Feature::Loop',
    dist_author => 'Eric Brine <ikegami@adaelis.com>',
    license     => 'CC0_1_0',
    configure_requires => {
@@ -28,16 +28,17 @@ my $build = Module::Build->new(
       'perl'               => 5.014000,
       'Devel::CallParser'  => 0,
       'Lexical::Sub'       => 0,
+      'syntax'             => 0.004,
       'version'            => 0,
       'XSLoader'           => 0,
    },
    PL_files => { 'make_call_parser.PL' => 'callparser1.h' },
-   add_to_cleanup => [ 'feature-loop-*' ],
+   add_to_cleanup => [ 'Syntax-Feature-Loop-*' ],
    meta_merge  => {
       resources => {
-         homepage   => 'http://search.cpan.org/dist/feature-loop/',
-         bugtracker => 'http://rt.cpan.org/Public/Dist/Display.html?Name=feature-loop',
-         repository => "http://github.com/ikegami/perl-feature-loop",  # type => "git"
+         homepage   => 'http://search.cpan.org/dist/Syntax-Feature-Loop/',
+         bugtracker => 'http://rt.cpan.org/Public/Dist/Display.html?Name=Syntax-Feature-Loop',
+         repository => "http://github.com/ikegami/perl-Syntax-Feature-Loop",  # type => "git"
       }
    },
 );

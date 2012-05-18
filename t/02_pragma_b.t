@@ -11,7 +11,7 @@ BEGIN {
    };
 }
 
-BEGIN { require feature::loop; }
+BEGIN { require Syntax::Feature::Loop; }
 
 
 my $x;
@@ -22,13 +22,13 @@ loop;
 is($x, "func", "Inactive on load");
 
 {
-   use feature::loop;
+   use syntax qw( loop );
    $x = undef;
    loop { $x = "loop"; last; }
    is($x, "loop", "Active on 'use'");
 
    {
-      no feature::loop;
+      no syntax qw( loop );
       $x = undef;
       loop;
       is($x, "func", "Inactive on 'no'");

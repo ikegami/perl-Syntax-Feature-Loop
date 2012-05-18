@@ -1,6 +1,7 @@
-Revision history for feature-loop
+Revision history for Syntax-Feature-Loop
 
 1.4.0  ~~~~/~~/~~
+       - Renamed from feature::loop.
        - Documentation improvements.
        - ~~~
 

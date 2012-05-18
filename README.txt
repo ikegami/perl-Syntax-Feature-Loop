@@ -1,6 +1,6 @@
-feature-loop
+Syntax-Feature-Loop
 
-feature::loop is a lexically-scoped pragma that
+Syntax::Feature::Loop is a lexically-scoped pragma that
 provides the C<loop BLOCK> syntax for unconditional loops.
 
 
@@ -24,6 +24,7 @@ This module requires these other modules and libraries:
     Test::More                  (For testing only)
     Devel::CallParser
     Lexical::Sub
+    syntax 0.004
     version
     XSLoader
 
@@ -33,21 +34,21 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the
 perldoc command.
 
-    perldoc feature::loop
+    perldoc Syntax::Feature::Loop
 
 You can also look for information at:
 
     RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=feature-loop
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Syntax-Feature-Loop
 
     AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/feature-loop
+        http://annocpan.org/dist/Syntax-Feature-Loop
 
     CPAN Ratings
-        http://cpanratings.perl.org/d/feature-loop
+        http://cpanratings.perl.org/d/Syntax-Feature-Loop
 
     Search CPAN
-        http://search.cpan.org/dist/feature-loop
+        http://search.cpan.org/dist/Syntax-Feature-Loop
 
 
 COPYRIGHT AND LICENCE

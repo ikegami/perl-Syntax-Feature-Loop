@@ -11,7 +11,7 @@ BEGIN {
    };
 }
 
-use feature::loop;
+use syntax qw( loop );
 
 {
    my $i = 0;

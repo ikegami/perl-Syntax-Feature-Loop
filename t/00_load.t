@@ -3,9 +3,9 @@ use warnings;
 
 use Test::More tests => 1;
 
-BEGIN { require_ok( 'feature::loop' ); }
+BEGIN { require_ok( 'Syntax::Feature::Loop' ); }
 
-diag( "Testing feature::loop $feature::loop::VERSION" );
+diag( "Testing Syntax::Feature::Loop $Syntax::Feature::Loop::VERSION" );
 diag( "Using Perl $]" );
 
 1;
