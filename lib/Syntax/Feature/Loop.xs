@@ -5,7 +5,8 @@
 #include "../../../callparser1.h"
 
 
-STATIC OP* remove_sub_call(OP* entersubop) {
+STATIC OP* remove_sub_call(pTHX_ OP* entersubop) {
+#define remove_sub_call(a) remove_sub_call(aTHX_ a)
    OP* pushop;
    OP* realop;
 
