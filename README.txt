@@ -1,6 +1,7 @@
 feature-loop
 
-Provides the "loop BLOCK" syntax for unconditional loops.
+feature::loop is a lexically-scoped pragma that
+provides the C<loop BLOCK> syntax for unconditional loops.
 
 
 INSTALLATION

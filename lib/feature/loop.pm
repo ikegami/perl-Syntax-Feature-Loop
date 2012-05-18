@@ -48,17 +48,30 @@ Version 1.3.0
 
 =head1 DESCRIPTION
 
-Provides the C<loop BLOCK> syntax for unconditional loops.
-
-Like other flow control statements, there is no need to
-terminate the statement with a semi-colon (C<;>).
+feature::loop is a lexically-scoped pragma that
+provides the C<loop BLOCK> syntax for unconditional loops.
 
 This module serves as a demonstration of the
 L<C<cv_set_call_parser>|perlapi/cv_set_call_parser> and
 L<C<cv_set_call_checker>|perlapi/cv_set_call_checker>
 Perl API calls.
 
-Other ways of achieving the same result are:
+
+=head2 C<< use feature::loop; >>
+
+Enables the use of C<loop BLOCK> until the end of the current lexical scope.
+
+
+=head2 C<< no feature::loop; >>
+
+Restores the standard behaviour of C<loop> (a sub call) until the end of the current lexical scope.
+
+
+=head2 C<< loop BLOCK >>
+
+Repeatedly executes the BLOCK until it is exited using C<last>, C<return>, C<die>, etc.
+
+In other words, it behaves just like all of the following:
 
 =over
 
@@ -70,15 +83,8 @@ Other ways of achieving the same result are:
 
 =back
 
-
-=head2 C<< use feature::loop; >>
-
-Enables the use of C<loop BLOCK> until the end of the current lexical scope.
-
-
-=head2 C<< no feature::loop; >>
-
-Restores the standard behaviour of C<loop> (a sub call) until the end of the current lexical scope.
+Like other flow control statements, there is no need to
+terminate the statement with a semi-colon (C<;>).
 
 
 =head1 SEE ALSO
