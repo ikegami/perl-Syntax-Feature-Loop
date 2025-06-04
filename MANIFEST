@@ -1,4 +1,3 @@
-.gitignore
 Changes
 lib/Syntax/Feature/Loop.pm
 LICENSE.txt
